@@ -135,3 +135,48 @@ Caused by: java.lang.IllegalStateException: Application does not have an active 
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
 	... 65 more
+
+!ENTRY com.smartbear.collaborator 2 0 2015-07-21 18:45:49.444
+!MESSAGE Could not connect to server to run Refresh Action Items
+!STACK 0
+com.smartbear.ccollab.client.CollabClientServerUrlConnectionException: Could not connect to a Collaborator Server at hp-code-review-pro.houston.hp.com: CollaboratorURL is unknown host
+	at com.smartbear.ccollab.client.LoginUtils.getConnectionExceptionIfRecognized(LoginUtils.java:621)
+	at com.smartbear.ccollab.client.LoginUtils$2.invoke(LoginUtils.java:488)
+	at com.sun.proxy.$Proxy27.getServerBuild(Unknown Source)
+	at com.smartbear.ccollab.client.LoginUtils.getXmlClient(LoginUtils.java:404)
+	at com.smartbear.collaborator.Collaborator.getConnection(Collaborator.java:148)
+	at com.smartbear.collaborator.jobs.ClientModelRefreshJob.createConnection(ClientModelRefreshJob.java:32)
+	at com.smartbear.collaborator.jobs.ClientModelRefreshJob.createConnection(ClientModelRefreshJob.java:1)
+	at com.smartbear.collaborator.jobs.RefreshJob.getConnection(RefreshJob.java:106)
+	at com.smartbear.collaborator.jobs.RefreshJob.run(RefreshJob.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.UnknownHostException: hp-code-review-pro.houston.hp.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:618)
+	at sun.security.ssl.SSLSocketImpl.<init>(SSLSocketImpl.java:451)
+	at sun.security.ssl.SSLSocketFactoryImpl.createSocket(SSLSocketFactoryImpl.java:140)
+	at com.smartbear.ssl.UserConfirmationSecureProtocolSocketFactory.createSocket(UserConfirmationSecureProtocolSocketFactory.java:59)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.apache.xmlrpc.client.XmlRpcCommonsTransport.writeRequest(XmlRpcCommonsTransport.java:235)
+	at org.apache.xmlrpc.client.XmlRpcStreamTransport.sendRequest(XmlRpcStreamTransport.java:151)
+	at org.apache.xmlrpc.client.XmlRpcHttpTransport.sendRequest(XmlRpcHttpTransport.java:115)
+	at com.smartbear.ccollab.datamodel.xmlrpc.XmlRpcClientFactory$XmlRpcCommonsTransport2.sendRequest(XmlRpcClientFactory.java:75)
+	at org.apache.xmlrpc.client.XmlRpcClientWorker.execute(XmlRpcClientWorker.java:56)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:167)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:137)
+	at org.apache.xmlrpc.client.XmlRpcClient.execute(XmlRpcClient.java:126)
+	at org.apache.xmlrpc.client.util.ClientFactory$1.invoke(ClientFactory.java:135)
+	at com.sun.proxy.$Proxy27.getServerBuild(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.smartbear.ccollab.client.LoginUtils$2.invoke(LoginUtils.java:475)
+	... 8 more
