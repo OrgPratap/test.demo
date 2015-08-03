@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pratap.oracleaqjmsqueue.example</groupId>
+  <artifactId>oracle-aq-jms-queue</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>oracle-aq-jms-queue</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- JDBC DEPENDENCY -->
+    <dependency>
+		<groupId>com.oracle</groupId>
+		<artifactId>ojdbc14</artifactId>
+		<version>10.2.0.4.0</version>
+	</dependency>
+	<!-- SPRING DEPENDENCY -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>4.2.0.RELEASE</version>
+	</dependency>
+	<!-- JMS DEPENDENCY -->
+	<dependency>
+		<groupId>javax.jms</groupId>
+		<artifactId>javax.jms-api</artifactId>
+		<version>2.0.1</version>
+	</dependency>
+	
+  </dependencies>
+</project>
